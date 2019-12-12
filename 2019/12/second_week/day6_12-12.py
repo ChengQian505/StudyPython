@@ -8,7 +8,8 @@ deskPath="C:\\Users\\Administrator\\Desktop\\test\\"
 
 # task1
 
-os.makedirs(deskPath)
+if not os.path.exists(deskPath):
+    os.makedirs(deskPath)
 
 # task2
 
@@ -17,8 +18,7 @@ f_w.write("我当前创建了一个文件")
 f_w.close()
 
 # task3
-
-f_r=open(deskPath+"1.txt","r+")
+f_r=open(deskPath+"1.txt","r")
 f2=open(deskPath+"2.txt","w+")
 f2.write(f_r.read()+"\n但是我的copy的")
 f_r.close()
